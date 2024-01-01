@@ -36,4 +36,49 @@
   margin-bottom: 60px;
 }
 
+.form_input {
+  width: 616px;
+  height: 64px;
+  margin-bottom: 24px;
+  color: var(--White);
+}
+
+.form_input::placeholder {
+  color: var(--white, #FFF);
+  font-family: var(--font-sub);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.form_input:-ms-input-placeholder {
+  color: var(--white, #FFF);
+  opacity: 0.7;
+}
+
+.form_input::-ms-input-placeholder {
+  color: var(--white, #FFF);
+  opacity: 0.7;
+}
+
+.form_input::-webkit-input-placeholder {
+  color: var(--white, #FFF);
+  opacity: 0.7;
+}
+
+.form_input::placeholder {
+  color: var(--white, #FFF);
+  opacity: 0.7;
+}
+
+#textarea {
+  height: 128px;
+  margin-bottom: 24px;
+}
+
+#feedback-btn {
+  width: 392px;
+}
+
 /*# sourceMappingURL=MainPage.css.map */

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../styles/MainPage.css';
 
 
 interface FormData {
@@ -25,21 +26,20 @@ const FeedbackForm: React.FC = () => {
     };
 
     return (
-        <div>
-            <form >
-                <label>
-                    <input
+        <div className="main-page_form-container">
+            <form className="main-page_form">
+                <input
+                        className="form_input"
                         type="text"
                         name="name"
-                        placeholder="Name"
+                        placeholder="First and lastname"
                         value={formData.name}
                         onChange={handleChange}
                         required
                     />
-                </label>
                 <br />
-                <label>
-                    <input
+                <input
+                        className="form_input"
                         type="email"
                         name="email"
                         placeholder="Email"
@@ -47,10 +47,9 @@ const FeedbackForm: React.FC = () => {
                         onChange={handleChange}
                         required
                     />
-                </label>
                 <br />
-                <label>
-                    <input
+                <input
+                        className="form_input"
                         type="tel"
                         name="phone_number"
                         placeholder="Phone number"
@@ -58,21 +57,18 @@ const FeedbackForm: React.FC = () => {
                         onChange={handleChange}
                         required
                     />
-                </label>
                 <br />
-                <label>
-                    <textarea
+                <input
+                        className="form_input"
+                        id="textarea"
                         name="text"
                         placeholder="Notice"
                         value={formData.text}
                         onChange={handleChange}
-                        rows={4}
-                        cols={50}
                         required
                     />
-                </label>
                 <br />
-                <button type="submit">Send</button>
+                <button type="submit" id="feedback-btn">Send</button>
             </form>
         </div>
     );
