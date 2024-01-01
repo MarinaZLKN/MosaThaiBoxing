@@ -7,14 +7,8 @@ import FeedbackForm from "./FeedbackForm";
 
 const MainPage: React.FC = () => {
     const handleSubmit = (formData: FormData) => {
-        // В этой функции вы можете выполнить логику отправки данных на сервер
-        // или другую обработку данных, которую вы хотите выполнить после отправки формы.
-
-        // Пример:
         console.log('Данные из формы:', formData);
 
-        // Здесь можно выполнить отправку данных на сервер, если это необходимо.
-        // Например, с использованием Fetch API или библиотеки Axios.
     };
     return (
         <div className="container main-page_container">
