@@ -1,7 +1,4 @@
-
-
 body {
-
     font-family: var(--font-family);
     background: var(--Black);
     display: inline-flex;
@@ -14,21 +11,20 @@ body {
 
 :root {
     --font-family:'Bebas Neue', sans-serif;
+    --font-sub: 'Poppins', sans-serif;
     --yellow-gr: linear-gradient(180deg, #FFD11B 0%, rgba(255, 209, 27, 0.00) 155.56%);
     --Golden: var(--yellow-gr, linear-gradient(180deg, #FFD11B 0%, rgba(255, 209, 27, 0.00) 155.56%));
     --Black: #1C1C1C;
     --White: #FFFFFF;
     --font-size-big: 64px;
     --font-size-small: 16px;
-
-
 }
-header {
 
-}
+
 .container {
     margin-top: 10px;
-    width: 1400px;
+    width: 1270px;
+
 }
 
 button{
@@ -49,4 +45,20 @@ button{
 button:hover {
     background: var(--Golden);
     color: var(--Black);
+    border: none;
+    transition: background-color 0.9s, color 0.3s;
+
 }
+.title{
+    color: var(--White, #FFF);
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family:var(--font-family);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px;
+    margin-bottom: 32px;
+}
+
+
+

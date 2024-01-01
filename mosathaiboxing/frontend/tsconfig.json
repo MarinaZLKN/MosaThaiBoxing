@@ -1,9 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "ES6",
+    "module": "ESNext",
     "strict": true,
     "jsx": "react",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@images/*": ["src/images/*"]
+    },
     "esModuleInterop": true
-  }
+  },
+  "include":  ["src/components", "src/custom.d.ts"],
+  "exclude": [
+    "node_modules"
+  ]
 }

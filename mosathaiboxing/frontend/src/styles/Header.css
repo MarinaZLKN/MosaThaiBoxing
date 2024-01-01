@@ -8,7 +8,7 @@
 .header-container .header-menu {
   display: flex;
   gap: 32px;
-  padding-right: 32px;
+  margin-right: -240px;
 }
 .header-container .header-menu .header-menu-main {
   color: var(--White, #FFF);
@@ -28,6 +28,11 @@
 }
 .header-container .registration-button {
   margin-bottom: 5px;
+}
+
+.logo-main {
+  width: 60px;
+  height: 60px;
 }
 
 /*# sourceMappingURL=Header.css.map */

@@ -6,9 +6,13 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
+        publicPath: '/',
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
+        alias: {
+          '@images': path.resolve(__dirname, 'src/images'),
+        },
     },
     module: {
         rules: [
@@ -26,16 +30,16 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|jpe?g|gif|svg|ico)$/i,
-                use: [
+              test: /\.(png|jpe?g|gif|svg|ico)$/i,
+                  use: [
                     {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'images',
-                        },
+                      loader: 'file-loader',
+                      options: {
+                        name: '[name].[ext]',
+                        outputPath: 'images/',
+                      },
                     },
-                ],
+                  ],
             },
         ],
     },
