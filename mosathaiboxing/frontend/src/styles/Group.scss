@@ -1,0 +1,14 @@
+.group-container{
+  display: flex;
+
+
+  .group-img{
+    width: 408px;
+    height: 248px;
+    overflow: hidden;
+    object-fit: cover; /* Масштабировать изображение, чтобы оно заполнило контейнер */
+    object-position: 50% 15%;
+    transform-origin: top;
+
+  }
+}

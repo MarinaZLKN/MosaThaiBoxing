@@ -1,15 +1,48 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import MainPic from "./MainPic";
 import Logo from '../Logo';
 import '../../styles/MainPage.css';
 import Title from "../Title";
 import FeedbackForm from "./FeedbackForm";
+import Contacts from "./Contacts";
+import GroupList from "./Groups/GroupList";
+import adv from '@images/advanced.png';
+import beg from '@images/beginners.png';
+import child from '@images/children.png';
 
+interface Groups {
+    groupName: string;
+    groupImage: string;
+    groupText: string;
+    groupAlt: string;
+}
 const MainPage: React.FC = () => {
     const handleSubmit = (formData: FormData) => {
         console.log('Данные из формы:', formData);
 
     };
+
+    const groupsData: Groups[] = [
+    {
+      groupName: 'Advanced',
+      groupImage: adv,
+      groupText: 'This session is for experienced fighters, focusing on advanced techniques and strategies. It includes complex combinations, counter-attacks, clinch work, advanced footwork, head movement, and defensive strategies. Intensive sparring is a key component. Conditioning aims to enhance endurance, strength, and agility.',
+      groupAlt: 'group picture',
+    },
+    {
+      groupName: 'Beginners',
+      groupImage: beg,
+      groupText: 'Tailored for newcomers, this training covers the fundamentals of Muay Thai, including basic stances, punches, kicks, elbows, knee strikes, and defensive maneuvers. The focus is on coordination, balance, and fitness, with strength and flexibility exercises. Light sparring is introduced gradually.',
+      groupAlt: 'group picture',
+    },
+    {
+      groupName: 'Children',
+      groupImage: child,
+      groupText: 'Designed for young learners, this program emphasizes fun, discipline, and basic Muay Thai techniques. It includes age-appropriate drills focusing on basic strikes and defenses, fostering physical fitness, coordination, and confidence. Safety is prioritized with non-contact or light-contact exercises.',
+      groupAlt: 'group picture',
+    },
+  ];
+
     return (
         <div className="container main-page_container">
             <div className="main-page_pic">
@@ -35,6 +68,8 @@ const MainPage: React.FC = () => {
             <div className="main-page-groups">
                 <div className="main-page-groups-title">
                     <Title text="Groups"/>
+                    <GroupList groups={groupsData} />
+
                 </div>
             </div>
             <div className="main-page_mt-block">
@@ -69,9 +104,11 @@ const MainPage: React.FC = () => {
                     <FeedbackForm />
                 </div>
             </div>
-            <div className="main-page_contacts"></div>
+            <div className="main-page_contacts">
+                <Contacts/>
+            </div>
             <div className="main-page_sponsors"></div>
-            <h1>Main Page</h1>
+
 
         </div>
     );
