@@ -2,7 +2,7 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "target": "ES6",
-    "module": "ESNext",
+    "module": "ES6",
     "strict": true,
     "jsx": "react",
     "skipLibCheck": true,
