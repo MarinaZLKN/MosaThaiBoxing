@@ -7,7 +7,7 @@ interface GroupProps {
     groupText: string;
     groupAlt: string;
 }
-
+//TODO check the chrome and add the animation
 const Group: React.FC<GroupProps> = ({groupName, groupImage, groupText, groupAlt}) => {
     const [showText, setShowText] = useState(false);
 
