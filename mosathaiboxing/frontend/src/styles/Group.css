@@ -1,14 +1,65 @@
-@charset "UTF-8";
 .group-container {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 60px;
 }
 .group-container .group-img {
-  width: 408px;
+  width: 100%;
   height: 248px;
-  overflow: hidden;
-  object-fit: cover; /* Масштабировать изображение, чтобы оно заполнило контейнер */
-  object-position: 50% 15%;
-  transform-origin: top;
+  cursor: pointer;
+}
+
+.group-card {
+  position: relative;
+  text-align: center;
+}
+.group-card .group-name {
+  position: absolute;
+  top: 94px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-family);
+  font-size: var(--font-size-big);
+  background: var(--yellow-gr, linear-gradient(180deg, #FFD11B 0%, rgba(255, 209, 27, 0) 155.56%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 64px;
+  cursor: pointer;
+}
+.group-card .group-name .group-name:hover {
+  color: #FFD11B;
+}
+.group-card .group-text {
+  width: 408px;
+  text-align: left;
+  padding-top: 20px;
+  color: var(--white, #FFF);
+  font-family: var(--font-sub);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 28px;
+  opacity: 0.8;
+}
+
+@media (min-width: 1500px) {
+  .group-container {
+    gap: 12px;
+  }
+  .group-container .group-name {
+    top: 120px;
+  }
+  .group-container .group-img {
+    height: 300px;
+  }
+  .group-container .group-text {
+    width: 550px;
+  }
 }
 
 /*# sourceMappingURL=Group.css.map */
