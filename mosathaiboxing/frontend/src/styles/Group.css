@@ -8,7 +8,6 @@
 .group-container .group-img {
   width: 100%;
   height: 248px;
-  cursor: pointer;
 }
 
 .group-card {
@@ -18,21 +17,23 @@
 .group-card .group-name {
   position: absolute;
   top: 94px;
-  left: 50%;
-  transform: translateX(-50%);
+  z-index: 1000;
+  left: 30%;
   font-family: var(--font-family);
   font-size: var(--font-size-big);
-  background: var(--yellow-gr, linear-gradient(180deg, #FFD11B 0%, rgba(255, 209, 27, 0) 155.56%));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #FFD11B;
+  font-variant-numeric: lining-nums proportional-nums;
   font-style: normal;
   font-weight: 400;
   line-height: 64px;
   cursor: pointer;
+  transform-origin: center;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
 }
-.group-card .group-name .group-name:hover {
-  color: #FFD11B;
+.group-card .group-name:hover {
+  text-shadow: 0px 8px 0px #1C1C1C;
+  transform: scale(1.1);
+  transform-origin: center;
 }
 .group-card .group-text {
   width: 408px;

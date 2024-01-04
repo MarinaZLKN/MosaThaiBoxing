@@ -17,8 +17,8 @@ const Group: React.FC<GroupProps> = ({groupName, groupImage, groupText, groupAlt
 
     return (
         <div className="group-card">
-            <img className="group-img" src={groupImage} alt={groupAlt} onClick={toggleText}/>
-            <div className="group-name">{groupName}</div>
+            <img className="group-img" src={groupImage} alt={groupAlt} />
+            <label className="group-name" onClick={toggleText}>{groupName}</label>
             {showText && <p className="group-text">{groupText}</p>}
         </div>
     );
