@@ -3,6 +3,7 @@ body {
     background: var(--Black);
     display: inline-flex;
     padding: 0px 0px;
+    width: 100%;
     flex-direction: column;
     /*justify-content: flex-end;*/
     align-items: flex-start;
@@ -10,7 +11,7 @@ body {
 
 :root {
     --font-family:'Bebas Neue', sans-serif;
-    --font-sub: 'Poppins', sans-serif;
+    --font-text:'Montserrat', sans-serif;
     --yellow-: #FFD11B;
     --Black: #0D0C0A;
     --White: #E5E5D6;
@@ -19,13 +20,34 @@ body {
 }
 
 
-.container {
 
+.container {
     width: 100%;
 
 }
 
 
+button{
+    width: 260px;
+    height: 64px;
+    background: transparent;
+    border-radius: 100px;
+    border: 2px solid  #FFD11B;
+    color:  var(--yellow-);
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: var(--font-family);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+}
+button:hover {
+    background: var(--yellow-);
+    color: var(--Black);
+    border: none;
+    transition: background-color 0.9s, color 0.3s;
+}
 
 
 

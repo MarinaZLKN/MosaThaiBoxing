@@ -3,14 +3,34 @@
   height: 148px;
   position: fixed;
   top: 0;
-  //z-index: 1000;
-  //background: rgba(13, 12, 10, 0.60);
-  //backdrop-filter: blur(35px);
+  padding: 16px 36px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //transition: backdrop-filter 0.3s ease;
   overflow: hidden;
+  z-index: 1000;
+
+  .header-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    .header-menu-main{
+      color: var(--White);
+      font-family: var(--font-family);
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 36px;
+      font-variant: all-small-caps;
+      cursor: pointer;
+    }
+    .header-menu-main:hover{
+      color: var(--yellow-);
+    }
+
+  }
 
 }
 .header-container::before {
@@ -26,6 +46,6 @@
    -webkit-backdrop-filter: blur(35px);
 }
 .logo-main{
-  width: 116px;
-  height: 116px;
+  width: 112px;
+  height: 112px;
 }

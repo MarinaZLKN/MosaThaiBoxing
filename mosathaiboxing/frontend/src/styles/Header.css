@@ -4,10 +4,31 @@
   height: 148px;
   position: fixed;
   top: 0;
+  padding: 16px 36px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  z-index: 1000;
+}
+.header-container .header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+.header-container .header-menu .header-menu-main {
+  color: var(--White);
+  font-family: var(--font-family);
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  font-variant: all-small-caps;
+  cursor: pointer;
+}
+.header-container .header-menu .header-menu-main:hover {
+  color: var(--yellow-);
 }
 
 .header-container::before {
@@ -24,8 +45,8 @@
 }
 
 .logo-main {
-  width: 116px;
-  height: 116px;
+  width: 112px;
+  height: 112px;
 }
 
 /*# sourceMappingURL=Header.css.map */
