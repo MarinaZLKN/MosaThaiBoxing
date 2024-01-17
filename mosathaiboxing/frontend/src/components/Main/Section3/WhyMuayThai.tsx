@@ -6,7 +6,7 @@ const WhyMuayThai: React.FC = () => {
     return (
         <div className="container wmt-container">
             <div className="wmt-picture-block">
-                <img src={wmt} alt="Why Muay Thai" />
+                <img src={wmt} alt="Why Muay Thai" className="wmt-picture"/>
             </div>
             <div className="wmt-info-block">
                 <h2 className="wmy-title">Why Muay Thai</h2>

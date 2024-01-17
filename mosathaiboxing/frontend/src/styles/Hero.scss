@@ -29,7 +29,17 @@
     margin-bottom: 30px;
   }
 
-
+  @media screen and (max-width: 1640px) {
+    .main-page_pic-title{
+      font-size: 13vw; /* Уменьшение размера шрифта заголовка */
+      line-height: 3vw;
+      margin-bottom: 3vw;
+    }
+    .main-page_pic-subtitle{
+      font-size: 1.3vw; /* Уменьшение размера шрифта заголовка */
+      line-height: 2vw;
+    }
+  }
 }
 
 .hero-image {
