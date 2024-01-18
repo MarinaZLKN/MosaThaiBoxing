@@ -30,6 +30,14 @@
 .header-container .header-menu .header-menu-main:hover {
   color: var(--yellow-);
 }
+@media screen and (max-width: 1640px) {
+  .header-container .header-menu .header-menu {
+    gap: 1vw;
+  }
+  .header-container .header-menu .header-menu-main {
+    font-size: 3vw;
+  }
+}
 
 .header-container::before {
   content: "";

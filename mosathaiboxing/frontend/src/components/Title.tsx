@@ -2,27 +2,31 @@ import React, { CSSProperties } from "react";
 
 interface TitleProps {
   text: string;
+  color?: string;
   size?: "small" | "medium" | "large";
-  style?: CSSProperties; // Дополнительные стили
+  lineHeight: string;
+  style?: CSSProperties;
 }
 
-const Title: React.FC<TitleProps> = ({ text, size = "medium", style }) => {
+const Title: React.FC<TitleProps> = ({ text, size = "large", color,lineHeight,style }) => {
   const getSizeStyles = () => {
     switch (size) {
       case "small":
         return { fontSize: "1rem" };
       case "large":
-        return { fontSize: "2rem" };
+        return { fontSize: "200px" };
       default:
-        return { fontSize: "1.5rem" }; // По умолчанию - средний размер
+        return { fontSize: "1.5rem" };
     }
   };
 
   return (
     <h1
       style={{
-        ...getSizeStyles(), // Применяем стили для размера
-        ...style, // Применяем дополнительные стили, если есть
+        ...getSizeStyles(),
+        color: color,
+        lineHeight: lineHeight,
+        ...style,
       }}
     >
       {text}

@@ -29,6 +29,14 @@
     .header-menu-main:hover{
       color: var(--yellow-);
     }
+    @media screen and (max-width: 1640px) {
+      .header-menu{
+        gap: 1vw;
+      }
+      .header-menu-main{
+        font-size: 3vw;
+      }
+    }
 
   }
 
