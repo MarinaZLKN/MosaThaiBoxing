@@ -1,0 +1,15 @@
+import React from 'react';
+import arrow from '@images/arrow-up.png';
+import '../../../styles/WhyMuayThai.scss';
+
+interface CustomPrevButtonProps {
+  onClick: () => void;
+}
+
+const CustomPrevButton: React.FC<CustomPrevButtonProps> = ({ onClick }) => (
+  <div  className="custom-prev-button" onClick={onClick}>
+    <img  className="wmt_btn" src={arrow} alt="arrow" />
+  </div>
+);
+
+export default CustomPrevButton;

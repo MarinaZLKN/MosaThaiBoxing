@@ -3,6 +3,11 @@
   height: 950px;
   display: flex;
   align-items: flex-start;
+  margin-bottom: 140px;
+
+  @media screen and (max-width: 1640px) {
+    margin-bottom: 0.5vh;
+  }
 
   .wmt-picture-block{
     padding-left: 172px;
@@ -19,6 +24,7 @@
           /* Дополнительное уменьшение размеров */
           width: 57vw; /* Примерно 768px на экране 1330px */
           height: 75vw; /* Примерно 1002px на экране 1330px */
+
       }
 
 
@@ -49,17 +55,49 @@
     @media screen and (max-width: 1640px) {
         padding: 5vw 6vw 5vw 6vw; /* Уменьшение отступов */
         gap: 3.5vw; /* Уменьшение расстояния между элементами */
-
         .wmy-title {
             font-size: 3.3vw; /* Уменьшение размера шрифта заголовка */
             line-height: 4vw; /* Уменьшение высоты строки заголовка */
         }
 
         .wmt-text {
-            font-size: 1.2vw; /* Уменьшение размера шрифта текста */
+            font-size: 1.1vw; /* Уменьшение размера шрифта текста */
             line-height: 1.7vw; /* Уменьшение высоты строки текста */
         }
     }
   }
+  .arrow-container{
+    display: flex;
+    gap: 15px;
+  }
 }
 
+#next-btn {
+  transform: rotate(180deg);
+}
+
+.custom-next-button, .custom-prev-button {
+  cursor: pointer;
+  width: 68px;
+  height: 68px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid var(--yellow-);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-next-button:hover,
+.custom-prev-button:hover {
+  background-color: #FFD11B;
+}
+.custom-prev-button img, .custom-next-button img {
+  transition: transform 0.3s, filter 0.3s;
+}
+
+
+.custom-prev-button:hover img, .custom-next-button:hover img {
+  filter: grayscale(100%) invert(100%);
+}
