@@ -1,4 +1,5 @@
 import React, { CSSProperties } from "react";
+import '../styles/Accordion.scss';
 
 interface TitleProps {
   text: string;
@@ -12,22 +13,23 @@ const Title: React.FC<TitleProps> = ({ text, size = "large", color,lineHeight,st
   const getSizeStyles = () => {
     switch (size) {
       case "small":
-        return { fontSize: "1rem" };
+        return "title-small";
       case "large":
-        return { fontSize: "200px" };
+        return "title-large";
       default:
-        return { fontSize: "1.5rem" };
+        return "title-medium";
     }
   };
 
   return (
     <h1
-      style={{
-        ...getSizeStyles(),
-        color: color,
-        lineHeight: lineHeight,
-        ...style,
-      }}
+        className={`title ${getSizeStyles()}`} style={{ color: color, lineHeight: lineHeight, ...style }}
+          // style={{
+          //   ...getSizeStyles(),
+          //   color: color,
+          //   lineHeight: lineHeight,
+          //   ...style,
+          // }}
     >
       {text}
     </h1>
