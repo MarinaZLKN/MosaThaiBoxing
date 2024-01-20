@@ -1,15 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../../../styles/Accordion.scss';
-import Accordion from "./Accordion";
 import sec4 from '@images/prg.png';
 import acc from '@images/accordion-pic.png';
 import Title from '../../Title';
+import { motion, AnimatePresence } from "framer-motion";
 
 interface AccordionData {
   title: string;
   content: string;
 }
 const Section4: React.FC = () => {
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const accordionData: AccordionData[] = [
     {
@@ -51,10 +52,27 @@ const Section4: React.FC = () => {
                 </div>
                 <div className="section4-accordion">
                   {accordionData.map((data, index) => (
-                      <div className="section4-accordeon-item">
-                          <Accordion key={index} title={data.title} content={data.content} />
+                     <div className="section4-accordeon-item" key={index}>
+                      <div
+                        className={`accordion-title ${openIndex === index ? 'active' : ''}`}
+                        onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                      >
+                        {data.title}
                       </div>
-
+                      <AnimatePresence>
+                        {openIndex === index && (
+                          <motion.div
+                            key={index}
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.5 }}
+                          >
+                            <div className="accordion-content">{data.content}</div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
                   ))}
                 </div>
             </div>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .section4-container {
   width: 100%;
   height: auto;
@@ -18,29 +19,93 @@
 .section4-container .section4-accordion-block {
   width: 924px;
   display: flex;
-  gap: 5%;
+  gap: 10%;
   position: absolute;
-  top: 35%;
+  top: 32%;
   left: 12%;
 }
 .section4-container .section4-accordion {
   height: auto;
-  width: 924px;
 }
-.section4-container .section4-accordion .section4-accordeon-item {
-  margin-top: 50px;
-}
-
-.accordeion-title {
+.accordion-title {
+  width: 500px;
   margin-bottom: 25px;
   cursor: pointer;
-  border-bottom: 1px solid white;
+  color: var(--White, #E5E5D6);
+  font-family: var(--font-family);
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 68px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.accordion-title::before {
+  content: "";
+  position: absolute;
+  bottom: -25px; /*  отступ подчеркивания */
+  left: 0;
+  width: 924px;
+  height: 2px; /* Высота подчеркивания */
+  background-color: var(--yellow-); /* Цвет подчеркивания */
+  opacity: 1; /* Начальная видимость подчеркивания */
+  transition: opacity 0.3s ease-in-out;
 }
 
 .accordion-content {
+  width: 924px;
   background-color: var(--yellow-);
-  margin-bottom: 30px;
   padding: 32px 44px 32px 40px;
+  color: black;
+  font-family: var(--font-text);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.title-small {
+  font-size: 90px;
+}
+
+.title-medium {
+  font-size: 150px;
+}
+
+.title-large {
+  font-size: 200px;
+}
+
+@media (max-width: 1536px) {
+  .section4-accordion-block {
+    margin-top: 40px;
+    width: 800px;
+  }
+  .accordion-title {
+    width: 600px; /* Заполнить всю ширину контейнера */
+    max-width: 600px; /* Макс ширина для заголовков */
+    margin-bottom: 15px;
+    font-size: 3em;
+  }
+  .accordion-title::before {
+    width: 600px;
+    bottom: -17px;
+  }
+  .accordion-content {
+    width: 100%;
+    max-width: 600px; /* Макс ширина для контента */
+  }
+  .title {
+    font-size: 10rem;
+    line-height: 1.2; /* Доделать потом line-height!!!!!*/
+  }
 }
 
 /*# sourceMappingURL=Accordion.css.map */
