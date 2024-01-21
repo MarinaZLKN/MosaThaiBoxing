@@ -1,6 +1,7 @@
 .decoration-container {
-  width: 90%;
-  height: 600px;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
 }
 
 .yellow-text {
@@ -27,7 +28,7 @@
   width: 1920px;
   padding-top: 30px;
   overflow: hidden;
-  height: 250px;
+  height: 210px;
 }
 
 .marquee-infinite div {
@@ -47,6 +48,32 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+.marquee-infinite2 {
+  width: 1920px;
+  padding-top: 10px;
+  overflow: hidden;
+  height: 250px;
+}
+
+.marquee-infinite2 div {
+  display: flex;
+  width: 188%;
+  animation: marquee-infinite2 10s linear infinite;
+}
+
+.marquee-infinite2 h1 {
+  white-space: nowrap;
+  width: 100%;
+}
+
+@keyframes marquee-infinite2 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 
