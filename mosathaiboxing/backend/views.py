@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from rest_framework import viewsets
-from .models import Post, Trainer, Price, Merchandise, Feedback, TrainingRegistration, Contact, AboutUs
+from rest_framework import viewsets, generics
+from .models import Post, Trainer, Price, Merchandise, Feedback, TrainingRegistration, Contact, AboutUs, Schedule
 from .serializers import (
     PostSerializer,
     TrainerSerializer,
@@ -9,7 +9,7 @@ from .serializers import (
     FeedbackSerializer,
     TrainingRegistrationSerializer,
     ContactSerializer,
-    AboutUsSerializer,
+    AboutUsSerializer, ScheduleSerializer,
 )
 
 
@@ -41,10 +41,17 @@ class TrainingRegistrationViewSet(viewsets.ModelViewSet):
     queryset = TrainingRegistration.objects.all()
     serializer_class = TrainingRegistrationSerializer
 
+
 class ContactViewSet(viewsets.ModelViewSet):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
 
+
 class AboutUsViewSet(viewsets.ModelViewSet):
     queryset = AboutUs.objects.all()
     serializer_class = AboutUsSerializer
+
+
+class ScheduleViewSet(viewsets.ModelViewSet):
+    queryset = Schedule.objects.all()
+    serializer_class = ScheduleSerializer

@@ -111,3 +111,29 @@ class AboutUs(models.Model):
     def __str__(self):
         return self.text
 
+
+class Schedule(models.Model):
+
+    TRAINING_TYPE_CHOICES = [
+        ('Advanced', 'Advanced'),
+        ('Beginners', 'Beginners'),
+        ('Children', 'Children'),
+        ('Sparring', 'Sparring'),
+        ('Basic Course', 'Basic Course'),
+        ('-', '-'),
+    ]
+
+    time = models.CharField(max_length=20, verbose_name='Time')
+    monday = models.CharField(max_length=12, choices=TRAINING_TYPE_CHOICES, default='-', verbose_name='Monday')
+    tuesday = models.CharField(max_length=12, choices=TRAINING_TYPE_CHOICES, default='-', verbose_name='Tuesday')
+    wednesday = models.CharField(max_length=12, choices=TRAINING_TYPE_CHOICES, default='-', verbose_name='Wednesday')
+    thursday = models.CharField(max_length=12, choices=TRAINING_TYPE_CHOICES, default='-', verbose_name='Thursday')
+    friday = models.CharField(max_length=12, choices=TRAINING_TYPE_CHOICES, default='-', verbose_name='Friday')
+    saturday = models.CharField(max_length=12, choices=TRAINING_TYPE_CHOICES, default='-', verbose_name='Saturday')
+
+    class Meta:
+        verbose_name = 'Shedule'
+        verbose_name_plural = 'Shedules'
+
+    def __str__(self):
+        return f'Shedule for {self.time}'
