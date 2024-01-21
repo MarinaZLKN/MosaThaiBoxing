@@ -3,6 +3,7 @@ import logo from '@images/mosaMain.png';
 import '../../../styles/Hero.scss';
 
 
+
 interface LogoProps {
   alt: string;
 

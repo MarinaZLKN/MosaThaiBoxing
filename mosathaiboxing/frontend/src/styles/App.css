@@ -18,14 +18,9 @@ body {
     --font-size-big: 200px;
     --font-size-small: 16px;
 }
-
-
-
 .container {
     width: 100%;
-
 }
-
 
 button{
     width: 260px;
