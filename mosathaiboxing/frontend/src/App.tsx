@@ -6,6 +6,7 @@ import Decoration from "./components/Main/Section1/Decoration";
 import WhyMuayThai from "./components/Main/Section3/WhyMuayThai";
 import Section4 from "./components/Main/Section4/Section4";
 import Section2 from "./components/Main/Section2/Section2";
+import Schedule from "./components/Main/Section6/Schedule";
 
 
 
@@ -28,6 +29,9 @@ const App: React.FC = () => {
                 </section>
                 <section>
                     <Section4 />
+                </section>
+                <section>
+                    <Schedule />
                 </section>
 
 

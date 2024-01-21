@@ -10,7 +10,7 @@ from .models import (
     Contact,
     AboutUs,
     MerchandisePhoto,
-    Size,
+    Size, Schedule,
 )
 
 admin.site.register(Post)
@@ -23,6 +23,7 @@ admin.site.register(Contact)
 admin.site.register(AboutUs)
 admin.site.register(MerchandisePhoto)
 admin.site.register(Size)
+admin.site.register(Schedule)
 
 
 

@@ -1,9 +1,9 @@
 .section4-container{
   width: 100%;
-  height: 1800px;
+  height: auto;
   position: relative;
   .section4-title{
-    padding-top: 5%;
+    padding-top: 2%;
     padding-left: 172px;
     position: absolute;
     width: 500px;
@@ -16,7 +16,6 @@
   .section4-accordion-block{
     width: 924px;
     display: flex;
-    //align-items: center;
     gap: 10%;
     position: absolute;
     top: 25%;
@@ -25,19 +24,13 @@
   .section4-accordion-picture{
     margin-top: 30px;
   }
-
   .section4-accordion{
-    //position: absolute;
-    //top: -20%;
-    //right: -14%;
     height: auto;
     .section4-accordeon-item{
-      //margin-top: 50px;
+
     }
   }
-
 }
-
 
 .accordion-title{
   width: 500px;
