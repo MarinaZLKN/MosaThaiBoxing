@@ -5,6 +5,7 @@ import Hero from "./components/Main/Section1/Hero";
 import Decoration from "./components/Main/Section1/Decoration";
 import WhyMuayThai from "./components/Main/Section3/WhyMuayThai";
 import Section4 from "./components/Main/Section4/Section4";
+import Section2 from "./components/Main/Section2/Section2";
 
 
 
@@ -18,7 +19,9 @@ const App: React.FC = () => {
             <main>
                 <section>
                     <Hero alt="Hero"/>
-                    <Decoration/>
+                </section>
+                <section>
+                    <Section2/>
                 </section>
                 <section>
                     <WhyMuayThai/>
