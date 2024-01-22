@@ -7,6 +7,7 @@ import WhyMuayThai from "./components/Main/Section3/WhyMuayThai";
 import Section4 from "./components/Main/Section4/Section4";
 import Section2 from "./components/Main/Section2/Section2";
 import Schedule from "./components/Main/Section6/Schedule";
+import TrainingList from "./components/Main/Section5/TrainingList";
 
 
 
@@ -29,6 +30,7 @@ const App: React.FC = () => {
                 </section>
                 <section>
                     <Section4 />
+                    <TrainingList/>
                 </section>
                 <section>
                     <Schedule />
