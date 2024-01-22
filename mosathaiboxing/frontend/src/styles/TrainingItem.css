@@ -1,0 +1,37 @@
+.prices-container {
+  width: 100%;
+  height: auto;
+  padding-bottom: 150px;
+}
+.prices-container .prices-title {
+  padding-left: 172px;
+}
+.prices-container .prices-prices {
+  padding-top: 96px;
+  padding-left: 172px;
+  display: flex;
+  gap: 5.5%;
+}
+.prices-container .prices-name {
+  color: var(--White, #E5E5D6);
+  text-align: center;
+  /* B3 */
+  font-family: var(--font-text);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  font-variant: all-small-caps;
+  padding-bottom: 40px;
+}
+.prices-container .prices-int {
+  color: var(--Yellow-2, #FFD11B);
+  text-align: center;
+  font-family: var(--font-text);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 52px;
+}
+
+/*# sourceMappingURL=TrainingItem.css.map */
