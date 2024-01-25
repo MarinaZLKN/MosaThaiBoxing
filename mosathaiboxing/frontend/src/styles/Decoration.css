@@ -33,13 +33,13 @@
 
 .marquee-infinite div {
   display: flex;
-  width: 188%;
+  width: 150%;
   animation: marquee-infinite 12s linear infinite;
 }
 
 .marquee-infinite h1 {
   white-space: nowrap;
-  width: 100%;
+  width: 150%;
 }
 
 @keyframes marquee-infinite {
