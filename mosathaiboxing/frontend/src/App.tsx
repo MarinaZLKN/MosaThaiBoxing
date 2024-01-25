@@ -8,6 +8,8 @@ import Section4 from "./components/Main/Section4/Section4";
 import Section2 from "./components/Main/Section2/Section2";
 import Schedule from "./components/Main/Section6/Schedule";
 import TrainingList from "./components/Main/Section5/TrainingList";
+import Footer from './components/Footer'
+import InfiniteMarquee from "./components/Main/Section2/InfiniteMarquee";
 
 
 
@@ -35,10 +37,14 @@ const App: React.FC = () => {
                 <section>
                     <Schedule />
                 </section>
+                <section>
+                    {/*<InfiniteMarquee/>*/}
+                </section>
 
 
             </main>
             <footer>
+                <Footer/>
             </footer>
         </div>
     );

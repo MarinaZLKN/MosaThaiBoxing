@@ -10,7 +10,7 @@ const Header: React.FC<HeaderProps> = () => {
     return (
         <div className="container header-container">
                 <div className="header-logo">
-                     <Logo alt="Logo" className="logo-main"/>
+                     <Logo alt="Header logo" className="logo-main"/>
                 </div>
                 <div className="header-menu">
                     <div className="header-menu-main">About</div>
