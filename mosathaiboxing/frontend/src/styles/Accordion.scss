@@ -18,11 +18,11 @@
     display: flex;
     gap: 10%;
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 172px;
   }
   .section4-accordion-picture{
-    margin-top: 30px;
+    margin-top: 26px;
   }
   .section4-accordion{
     height: auto;
@@ -75,13 +75,13 @@
   font-weight: 300;
 }
 .title-small {
-  font-size: 90px;
+  font-size: 60px;
 }
 .title-medium {
-  font-size: 130px;
+  font-size: 100px;
 }
 .title-large {
-  font-size: 180px;
+  font-size: 150px;
 }
 
 @media (max-width: 1536px) {
@@ -105,7 +105,7 @@
     max-width: 600px; /* Макс ширина для контента */
   }
   .title {
-    font-size: 10rem;
+    font-size: 8rem;
     line-height: 1.2;/* Доделать потом line-height!!!!!*/
   }
 }

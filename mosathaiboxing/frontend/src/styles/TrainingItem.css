@@ -1,13 +1,20 @@
 .prices-container {
   width: 100%;
   height: auto;
-  padding-bottom: 150px;
+  padding-bottom: 100px;
+}
+.prices-container .training-item_price {
+  background-color: transparent;
+  border: 1px solid var(--yellow-);
+  width: 320px;
+  height: 300px;
+  padding: 55px 60px;
 }
 .prices-container .prices-title {
   padding-left: 172px;
 }
 .prices-container .prices-prices {
-  padding-top: 96px;
+  padding-top: 2%;
   padding-left: 172px;
   display: flex;
   gap: 5.5%;
