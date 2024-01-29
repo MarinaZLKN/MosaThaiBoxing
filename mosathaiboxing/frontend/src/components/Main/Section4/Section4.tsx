@@ -43,7 +43,7 @@ const Section4: React.FC = () => {
     return (
         <div className="container section4-container">
             <div className="section4-title">
-                 <Title text="Our programs" size="large" color="var(--White)" lineHeight="168px"/>
+                 <Title text="Our programs" size="large" color="var(--White)" lineHeight="120px"/>
             </div>
             <img src={sec4} alt="section4 picture" className="section4-picture"/>
             <div className="section4-accordion-block">

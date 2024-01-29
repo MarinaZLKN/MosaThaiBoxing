@@ -4,7 +4,7 @@
 .schedule-table-container .schedule-table {
   max-width: 100%;
   overflow-x: auto;
-  margin: 20px 0;
+  padding-top: 30px;
 }
 .schedule-table-container table {
   width: 100%;
