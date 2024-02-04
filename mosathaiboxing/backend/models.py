@@ -1,7 +1,6 @@
 from django.db import models
 
 
-
 class Post(models.Model):
     title = models.CharField(max_length=255)
     date_created = models.DateTimeField(auto_now_add=True)
@@ -18,9 +17,8 @@ class Post(models.Model):
     photo9 = models.ImageField(upload_to='news/photos/', blank=True)
     photo10 = models.ImageField(upload_to='news/photos/', blank=True)
 
-
-def __str__(self):
-        return self.title
+    def __str__(self):
+            return self.title
 
 
 class Trainer(models.Model):

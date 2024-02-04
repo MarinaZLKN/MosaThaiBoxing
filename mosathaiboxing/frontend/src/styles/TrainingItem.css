@@ -6,9 +6,9 @@
 .prices-container .training-item_price {
   background-color: transparent;
   border: 1px solid var(--yellow-);
-  width: 320px;
-  height: 300px;
-  padding: 55px 60px;
+  width: 19%;
+  height: auto;
+  padding: 75px 20px;
 }
 .prices-container .prices-title {
   padding-left: 172px;
@@ -17,7 +17,7 @@
   padding-top: 2%;
   padding-left: 172px;
   display: flex;
-  gap: 5.5%;
+  gap: 4.5%;
 }
 .prices-container .prices-name {
   color: var(--White, #E5E5D6);
@@ -39,6 +39,22 @@
   font-style: normal;
   font-weight: 500;
   line-height: 52px;
+}
+@media screen and (max-width: 1440px) {
+  .prices-container .training-item_price {
+    padding: 55px 30px;
+  }
+  .prices-container .prices-name {
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 10px;
+  }
+  .prices-container .prices-int {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 52px;
+  }
 }
 
 /*# sourceMappingURL=TrainingItem.css.map */
