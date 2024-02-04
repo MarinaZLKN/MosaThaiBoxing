@@ -11,15 +11,22 @@ import TrainingList from "./components/Main/Section5/TrainingList";
 import Footer from './components/Footer'
 import InfiniteMarquee from "./components/Main/Section2/InfiniteMarquee";
 import TrainerList from "./components/Main/Section7/TrainerList";
-
-
+import Section8 from "./components/Main/Section8/Section8";
 
 
 const App: React.FC = () => {
+
+    function scrollToSection(sectionId: string) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({behavior: 'smooth'});
+        }
+    };
+
     return (
         <div className="container">
             <header>
-                <Header/>
+                <Header scrollToSection={scrollToSection}/>
             </header>
             <main>
                 <section>
@@ -28,19 +35,25 @@ const App: React.FC = () => {
                 <section>
                     <Section2/>
                 </section>
-                <section>
+                <section id="about">
                     <WhyMuayThai/>
                 </section>
-                <section>
-                    <Section4 />
+                <section id="programs">
+                    <Section4/>
+
+                </section>
+                <section id="prices">
                     <TrainingList/>
                 </section>
-                <section>
-                    <Schedule />
+                <section id="schedule">
+                    <Schedule/>
                 </section>
-                <section>
+                <section id="coaches">
                     <TrainerList/>
                     {/*<InfiniteMarquee/>*/}
+                </section>
+                <section>
+                    <Section8/>
                 </section>
 
 

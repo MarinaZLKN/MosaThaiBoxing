@@ -2,6 +2,7 @@
   //position: relative;
   z-index: 100;
   width: 100%;
+
   .image-title{
     position: absolute;
     top: 40%;
@@ -29,7 +30,7 @@
     margin-bottom: 30px;
   }
 
-  @media screen and (max-width: 1640px) {
+  @media screen and (max-width: 1440px) {
     .main-page_pic-title{
       font-size: 13vw; /* Уменьшение размера шрифта заголовка */
       line-height: 3vw;
@@ -45,5 +46,9 @@
 .hero-image {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: auto
+}
+
+@media screen and (max-width: 1440px) {
+
 }

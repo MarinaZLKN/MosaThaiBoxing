@@ -16,8 +16,8 @@ const Footer: React.FC = () => {
         </div>
         <Logo alt="footer logo" className="footer-logo"/>
         <div className="footer-social">
-            <img src={fb}/>
-            <img src={ig}/>
+            <img className="footer-social_logo" src={fb}/>
+            <img className="footer-social_logo" src={ig}/>
         </div>
         </div>
 
