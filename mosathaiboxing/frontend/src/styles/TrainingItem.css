@@ -22,7 +22,6 @@
 .prices-container .prices-name {
   color: var(--White, #E5E5D6);
   text-align: center;
-  /* B3 */
   font-family: var(--font-text);
   font-size: 28px;
   font-style: normal;

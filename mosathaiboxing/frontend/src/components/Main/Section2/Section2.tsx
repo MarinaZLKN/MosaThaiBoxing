@@ -10,8 +10,8 @@ const Section2: React.FC = () => {
     return (
         <div className="container decoration-container">
             {/*<RunningText/>*/}
-            {/*<InfiniteMarquee />*/}
-            {/*<InfiniteMarquee2 />*/}
+            <InfiniteMarquee />
+            <InfiniteMarquee2 />
 
 
         </div>

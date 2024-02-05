@@ -50,10 +50,10 @@ const App: React.FC = () => {
                 </section>
                 <section id="coaches">
                     <TrainerList/>
-                    {/*<InfiniteMarquee/>*/}
                 </section>
                 <section>
                     <Section8/>
+                    <InfiniteMarquee/>
                 </section>
 
 

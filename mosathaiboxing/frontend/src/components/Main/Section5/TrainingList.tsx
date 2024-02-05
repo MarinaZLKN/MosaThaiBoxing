@@ -18,7 +18,7 @@ const TrainingList: React.FC = () => {
         setTrainings(data);
       })
       .catch((error) => {
-        console.error('Ошибка при получении данных:', error);
+        console.error('Error fetching data:', error);
       });
   }, []);
 
