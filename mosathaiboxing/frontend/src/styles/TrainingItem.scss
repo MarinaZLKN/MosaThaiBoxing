@@ -6,8 +6,8 @@
     background-color: transparent;
     border: 1px solid var(--yellow-);
     width: 19%;
-    //320
-    height: auto;
+    //320px
+    height: auto; //300px
     padding: 75px 20px;
   }
   .prices-title{
@@ -23,7 +23,6 @@
   .prices-name{
     color: var(--White, #E5E5D6);
     text-align: center;
-    /* B3 */
     font-family: var(--font-text);
     font-size: 28px;
     font-style: normal;

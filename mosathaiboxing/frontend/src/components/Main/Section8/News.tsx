@@ -17,7 +17,7 @@ const News: React.FC = () => {
     axios.get('http://127.0.0.1:8000/v1/posts/')
       .then(response => {
         // Предполагая, что сервер возвращает список новостей, выбираем первую новость как последнюю
-        const latestNewsData = response.data[0];
+        const latestNewsData = response.data[response.data.length - 1];
         setLatestNews(latestNewsData);
       })
       .catch(error => {
