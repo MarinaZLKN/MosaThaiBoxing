@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import InfiniteMarquee from "./components/Main/Section2/InfiniteMarquee";
 import TrainerList from "./components/Main/Section7/TrainerList";
 import Section8 from "./components/Main/Section8/Section8";
+import Contacts from "./components/Main/Section9/Contacts";
 
 
 const App: React.FC = () => {
@@ -53,7 +54,9 @@ const App: React.FC = () => {
                 </section>
                 <section>
                     <Section8/>
-                    <InfiniteMarquee/>
+                </section>
+                <section>
+                    <Contacts/>
                 </section>
 
 

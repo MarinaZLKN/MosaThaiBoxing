@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from rest_framework import viewsets, generics
+from rest_framework import viewsets, generics, status
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
 from .models import Post, Trainer, Price, Merchandise, Feedback, TrainingRegistration, Contact, AboutUs, Schedule
 from .serializers import (
     PostSerializer,
@@ -32,6 +35,18 @@ class PriceViewSet(viewsets.ModelViewSet):
 class MerchandiseViewSet(viewsets.ModelViewSet):
     queryset = Merchandise.objects.all()
     serializer_class = MerchandiseSerializer
+
+
+class FeedbackView(APIView):
+    def post(self, request, *args, **kwargs):
+        data = request.data
+        serializer = FeedbackSerializer(data=data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class FeedbackViewSet(viewsets.ModelViewSet):
     queryset = Feedback.objects.all()
