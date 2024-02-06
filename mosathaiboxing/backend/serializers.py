@@ -56,7 +56,7 @@ class MerchandiseSerializer(serializers.ModelSerializer):
 class FeedbackSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feedback
-        fields = '__all__'
+        fields = ['name', 'email', 'phone_number', 'text']
 
 
 class TrainingRegistrationSerializer(serializers.ModelSerializer):

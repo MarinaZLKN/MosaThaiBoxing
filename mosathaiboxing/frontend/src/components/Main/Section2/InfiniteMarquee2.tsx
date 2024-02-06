@@ -8,6 +8,7 @@ const InfiniteMarquee2: React.FC = () => {
           <h1> <span className="white-text"> MOSA <span className="yellow-text">THAI</span> BOXING </span> </h1>
           <h1> <span className="white-text"> MOSA <span className="yellow-text">THAI</span> BOXING </span></h1>
           <h1> <span className="white-text"> MOSA <span className="yellow-text">THAI</span> BOXING </span></h1>
+          <h1> <span className="white-text"> MOSA <span className="yellow-text">THAI</span> BOXING </span></h1>
       </div>
     </div>
   );

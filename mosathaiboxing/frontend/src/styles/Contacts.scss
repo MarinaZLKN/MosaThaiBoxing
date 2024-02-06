@@ -1,0 +1,41 @@
+.contacts-container{
+  width: 100%;
+  height: auto;
+  position: relative;
+  .contacts-row{
+    position: absolute;
+    top: 1%;
+  }
+  .contacts-picture{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+
+  }
+  .contacts-wrapper{
+      padding-left: 172px;
+      position: absolute;
+      top: 20%;
+
+      .contacts-form {
+        display: block;
+        width: 700px;
+        height: 550px;
+        margin-top: 10%;
+      }
+
+      .contacts-form input,
+      .contacts-form textarea {
+        display: block;
+        height: 8%;
+        width: 100%; /* Занимать всю доступную ширину */
+        margin-bottom: 5%; /* Опционально: добавляем отступ снизу между элементами формы */
+      }
+      .contacts-lab{
+        color: #5C5C59;
+        font-family: var(--font-text);
+        font-size: 16px;
+      }
+  }
+
+}

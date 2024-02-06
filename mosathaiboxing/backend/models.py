@@ -65,10 +65,10 @@ class Size(models.Model):
 
 class Feedback(models.Model):
     name = models.CharField(max_length=255)
-    email = models.EmailField()
+    email = models.EmailField(max_length=300, unique=True, blank=True, null=True, verbose_name='email')
     phone_number = models.CharField(max_length=15)
     date_created = models.DateTimeField(auto_now_add=True)
-    text = models.TextField()
+    text = models.TextField(max_length=1024)
 
     def __str__(self):
         return self.name
@@ -93,11 +93,13 @@ class TrainingRegistration(models.Model):
 
 
 class Contact(models.Model):
-    address = models.CharField(max_length=255)
-    phone_number = models.CharField(max_length=15)
-    account_number = models.CharField(max_length=20)
-    email = models.EmailField()
-    registration_number = models.CharField(max_length=20, unique=True)
+    company_name = models.CharField(max_length=100, null=True,verbose_name='Company name')
+    address = models.CharField(max_length=255, blank=True, null=True, verbose_name='Company address')
+    phone_number1 = models.CharField(max_length=15, blank=True, null=True, verbose_name='Phone number 1')
+    phone_number2 = models.CharField(max_length=15, blank=True, null=True, verbose_name='Phone number 2')
+    account_number = models.CharField(max_length=20, unique=True, blank=True, null=True, verbose_name='Account number')
+    email = models.EmailField(max_length=300, unique=True, blank=True, null=True, verbose_name='email')
+    registration_number = models.CharField(max_length=20, unique=True,blank=True, null=True,)
 
     def __str__(self):
         return self.address

@@ -13,11 +13,15 @@ from .models import (
     Size, Schedule,
 )
 
+class FeedbackAdmin(admin.ModelAdmin):
+    list_display = ('name', 'date_created', 'email')
+
+
 admin.site.register(Post)
 admin.site.register(Trainer)
 admin.site.register(Price)
 admin.site.register(Merchandise)
-admin.site.register(Feedback)
+admin.site.register(Feedback, FeedbackAdmin)
 admin.site.register(TrainingRegistration)
 admin.site.register(Contact)
 admin.site.register(AboutUs)
