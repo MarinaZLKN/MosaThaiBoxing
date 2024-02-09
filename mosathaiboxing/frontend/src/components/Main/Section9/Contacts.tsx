@@ -25,6 +25,9 @@ const Contacts: React.FC = () => {
         phone_number: '',
         text: '',
     });
+    const [emailError, setEmailError] = useState<string | null>(null);
+    const [phoneError, setPhoneError] = useState<string | null>(null);
+
 
     useEffect(() => {
         axios.get('http://127.0.0.1:8000/v1/contacts/')
@@ -39,6 +42,22 @@ const Contacts: React.FC = () => {
 
     const handleFormSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (!formData.email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
+            setEmailError("Invalid email format");
+            return;
+        } else {
+            setEmailError(null);
+        }
+
+
+        if (!formData.phone_number.match(/^\+?\d+(\s?\d+)*$/))  {
+            setPhoneError("Phone number must contain only digits and may start with +");
+            return;
+        } else {
+            setPhoneError(null);
+        }
+
 
         axios.post('http://127.0.0.1:8000/v1/feedbacks/', formData)
             .then((response) => {
@@ -62,37 +81,50 @@ const Contacts: React.FC = () => {
                     <label className="contacts-lab">Name*</label>
                     <input
                         type="text"
+                        className="input-contacts"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     />
                     <label className="contacts-lab">Email</label>
                     <input
-                        type="email"
+                        type="text"
                         value={formData.email}
+                        className={emailError ? 'invalid-input' : 'input-contacts'}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
+                    {/*{emailError && <p className="error-message">{emailError}</p>}*/}
                     <label className="contacts-lab">Phone number*</label>
                     <input
                         type="text"
                         value={formData.phone_number}
+                        className={phoneError ? 'invalid-input' : 'input-contacts'}
                         onChange={(e) => setFormData({ ...formData, phone_number: e.target.value })}
                     />
                     <label className="contacts-lab">Message</label>
                     <textarea
                         value={formData.text}
+                        id="textarea1"
+                        className="input-contacts"
                         onChange={(e) => setFormData({ ...formData, text: e.target.value })}
                     />
                     <button type="submit">Contact us</button>
                 </form>
                 {contact && (
-                    <div>
-                        <h1>{contact.company_name}</h1>
-                        <p>Адрес: {contact.address}</p>
-                        <p>Телефон 1: {contact.phone_number1}</p>
-                        <p>Телефон 2: {contact.phone_number2}</p>
-                        <p>Номер счета: {contact.account_number}</p>
-                        <p>Email: {contact.email}</p>
-                        <p>{contact.registration_number}</p>
+                    <div className="contacts-data-container">
+                        <div className="contacts-map">
+                            Map
+                        </div>
+                        <div className="contacts-data">
+                            <label className="contacts-title">Contact</label>
+                            <p className="contacts-p">{contact.company_name}</p>
+                            <p className="contacts-p">{contact.account_number}</p>
+                            <p className="contacts-p">{contact.address}</p>
+                            <p className="contacts-p">{contact.phone_number1}</p>
+                            <p className="contacts-p">{contact.phone_number2}</p>
+                            <p className="contacts-p">{contact.email}</p>
+                            <p className="contacts-p">{contact.registration_number}</p>
+                        </div>
+
                     </div>
                 )}
             </div>
