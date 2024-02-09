@@ -65,13 +65,14 @@ class Size(models.Model):
 
 class Feedback(models.Model):
     name = models.CharField(max_length=255)
-    email = models.EmailField(max_length=300, unique=True, blank=True, null=True, verbose_name='email')
+    email = models.EmailField(max_length=300, blank=True, null=True, verbose_name='email')
     phone_number = models.CharField(max_length=15)
     date_created = models.DateTimeField(auto_now_add=True)
     text = models.TextField(max_length=1024)
 
     def __str__(self):
         return self.name
+
 
 
 class TrainingRegistration(models.Model):
