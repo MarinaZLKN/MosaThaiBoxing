@@ -43,12 +43,13 @@
   font-family: var(--font-text) !important;
   color: var(--White);
   font-size: 14px;
-  border-bottom: 2px solid #AF4B03;
+  border-bottom: 2px solid red;
 }
 .contacts-container .contacts-wrapper .contacts-form .error-message {
-  color: #AF4B03;
-  font-size: 14px;
-  margin-top: 5px;
+  color: red;
+  font-size: 12px;
+  margin-top: 10px;
+  font-family: var(--font-text);
 }
 .contacts-container .contacts-wrapper .contacts-form input,
 .contacts-container .contacts-wrapper .contacts-form textarea {
@@ -67,6 +68,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  gap: 60px;
   height: auto;
 }
 .contacts-container .contacts-wrapper .contacts-data-container .contacts-map {

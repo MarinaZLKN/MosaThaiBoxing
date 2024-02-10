@@ -4,6 +4,7 @@ import contacts_pic from '@images/contacts-pic.png';
 import '../../../styles/Contacts.scss'
 import Title from "../../Title";
 import InfiniteMarquee from "../Section2/InfiniteMarquee";
+import map from '@images/map.png'
 
 
 interface Contact {
@@ -44,7 +45,7 @@ const Contacts: React.FC = () => {
         e.preventDefault();
 
         if (!formData.email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
-            setEmailError("Invalid email format");
+            setEmailError("Invalid email");
             return;
         } else {
             setEmailError(null);
@@ -78,21 +79,20 @@ const Contacts: React.FC = () => {
             <div className="contacts-wrapper">
                 <Title text="Contact us" size="large" color="var(--White)" lineHeight="120px"/>
                 <form className="contacts-form" onSubmit={handleFormSubmit}>
-                    <label className="contacts-lab">Name*</label>
+                    <label className="contacts-lab">Name</label>
                     <input
                         type="text"
                         className="input-contacts"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     />
-                    <label className="contacts-lab">Email</label>
+                    <label className="contacts-lab">Email*</label> {emailError && <p className="error-message">{emailError}</p>}
                     <input
                         type="text"
                         value={formData.email}
                         className={emailError ? 'invalid-input' : 'input-contacts'}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
-                    {/*{emailError && <p className="error-message">{emailError}</p>}*/}
                     <label className="contacts-lab">Phone number*</label>
                     <input
                         type="text"
@@ -112,7 +112,7 @@ const Contacts: React.FC = () => {
                 {contact && (
                     <div className="contacts-data-container">
                         <div className="contacts-map">
-                            Map
+                            <img src={map} width="1000px" height="auto"/>
                         </div>
                         <div className="contacts-data">
                             <label className="contacts-title">Contact</label>

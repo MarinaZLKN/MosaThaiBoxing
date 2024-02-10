@@ -9,7 +9,7 @@
   .footer-content{
     display: block;
     position: absolute;
-    left: 28%;
+    left: 31%;
     bottom: 50px;
 
   }
@@ -23,13 +23,13 @@
 
   }
   .footer-logo{
-    padding-left: 40%;
+    padding-left: 37%;
   }
   .footer-social{
     display: flex;
     gap: 20px;
     padding-top: 20px;
-    padding-left: 47%;
+    padding-left: 44%;
     .footer-social_logo{
       cursor: pointer;
     }
@@ -38,12 +38,14 @@
   @media screen and (max-width: 1440px) {
     .footer-content{
       bottom: 30px;
+      left: 27%;
     }
     .footer-title{
-      padding-left: 100px;
+      padding-left: 70px;
       font-size: 40px;
       line-height: 50px;
     }
+
 
 
   }

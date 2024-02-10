@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from './Logo';
 import '../styles/Header.scss';
+import {Link} from "react-router-dom";
 
 interface HeaderProps {
     scrollToSection: (sectionId: string) => void;
@@ -20,10 +21,12 @@ const Header: React.FC<HeaderProps> = ({scrollToSection}) => {
                     <div className="header-menu-main" onClick={() => scrollToSection('coaches')}>Coaches</div>
                     <div className="header-menu-main">News</div>
                     <div className="header-menu-main">Merch</div>
-                    <div className="header-menu-main">Contact</div>
+                    <div className="header-menu-main" onClick={() => scrollToSection('contact')}>Contact</div>
                 </div>
                 <div className="registration-button">
-                    <button className="header-btn">Register</button>
+                    <Link to="/register">
+                        <button className="header-btn">Register</button>
+                    </Link>
                 </div>
 
             </div>
