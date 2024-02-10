@@ -80,6 +80,7 @@ class TrainingRegistration(models.Model):
         ('advanced', 'Advanced'),
         ('beginner', 'Beginner'),
         ('child', 'Child'),
+        ('basic-course', 'Basic Course'),
     ]
 
     name = models.CharField(max_length=255)
