@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({scrollToSection}) => {
                     <div className="header-menu-main" onClick={() => scrollToSection('prices')}>Prices</div>
                     <div className="header-menu-main" onClick={() => scrollToSection('schedule')}>Schedule</div>
                     <div className="header-menu-main" onClick={() => scrollToSection('coaches')}>Coaches</div>
-                    <div className="header-menu-main">News</div>
+                    <Link to="/news"><div className="header-menu-main">News</div></Link>
                     <div className="header-menu-main">Merch</div>
                     <div className="header-menu-main" onClick={() => scrollToSection('contact')}>Contact</div>
                 </div>
