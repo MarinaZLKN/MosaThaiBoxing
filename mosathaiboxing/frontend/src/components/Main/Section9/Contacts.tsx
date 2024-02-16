@@ -45,7 +45,7 @@ const Contacts: React.FC = () => {
         e.preventDefault();
 
         if (!formData.email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
-            setEmailError("Invalid email");
+            setEmailError("Invalid email format");
             return;
         } else {
             setEmailError(null);
@@ -86,20 +86,22 @@ const Contacts: React.FC = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     />
-                    <label className="contacts-lab">Email*</label> {emailError && <p className="error-message">{emailError}</p>}
+                    <label className={emailError ? 'invalid_contacts-lab': "contacts-lab"}>Email*</label>
                     <input
                         type="text"
                         value={formData.email}
                         className={emailError ? 'invalid-input' : 'input-contacts'}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
-                    <label className="contacts-lab">Phone number*</label>
+                     {emailError && <p className="error-message">{emailError}</p>}
+                    <label className={phoneError ? 'invalid_contacts-lab': "contacts-lab"}>Phone number*</label>
                     <input
                         type="text"
                         value={formData.phone_number}
                         className={phoneError ? 'invalid-input' : 'input-contacts'}
                         onChange={(e) => setFormData({ ...formData, phone_number: e.target.value })}
                     />
+                    {phoneError && <p className="error-message">{phoneError}</p>}
                     <label className="contacts-lab">Message</label>
                     <textarea
                         value={formData.text}

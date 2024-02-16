@@ -44,11 +44,19 @@
           border-bottom: 2px solid red;
         }
 
+        .invalid_contacts-lab{
+          color: red;
+          font-family: var(--font-text);
+          font-size: 16px;
+        }
+
+
         .error-message {
+            text-align: right;
             color: red;
-            font-size: 12px;
-            margin-top: 10px;
+            font-size: 16px;
             font-family: var(--font-text);
+          margin-top: -10px;
         }
       }
 
