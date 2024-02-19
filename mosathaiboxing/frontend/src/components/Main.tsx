@@ -9,6 +9,7 @@ import TrainerList from './Main/Section7/TrainerList';
 import Section8 from './Main/Section8/Section8';
 import Contacts from './Main/Section9/Contacts';
 import Header from "./Header";
+import Footer from "./Footer";
 
 
 const Main: React.FC = () => {
@@ -53,6 +54,9 @@ const Main: React.FC = () => {
                 </section>
 
             </main>
+            <footer>
+                <Footer/>
+            </footer>
         </>
 
     );

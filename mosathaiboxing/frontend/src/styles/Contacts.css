@@ -3,6 +3,7 @@
   width: 100%;
   height: auto;
   position: relative;
+  padding-bottom: 20px;
 }
 .contacts-container .contacts-row {
   position: absolute;
@@ -75,10 +76,15 @@
   display: flex;
   flex-direction: row;
   gap: 60px;
-  height: auto;
+  height: 700px;
+  overflow: hidden;
 }
 .contacts-container .contacts-wrapper .contacts-data-container .contacts-map {
   flex: 2;
+}
+.contacts-container .contacts-wrapper .contacts-data-container .contacts-map .contacts-map-pic {
+  width: 700px;
+  height: 500px;
 }
 .contacts-container .contacts-wrapper .contacts-data-container .contacts-data {
   flex: 1;

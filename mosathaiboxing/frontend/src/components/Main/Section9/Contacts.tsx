@@ -114,7 +114,7 @@ const Contacts: React.FC = () => {
                 {contact && (
                     <div className="contacts-data-container">
                         <div className="contacts-map">
-                            <img src={map} width="1000px" height="auto"/>
+                            <img src={map} className="contacts-map-pic" />
                         </div>
                         <div className="contacts-data">
                             <label className="contacts-title">Contact</label>

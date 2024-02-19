@@ -1,7 +1,6 @@
 import * as React from 'react';
 import './styles/App.css';
 import Main from './components/Main'
-import Footer from './components/Footer'
 import TrainReg from "./components/TrainReg";
 import { Routes, Route } from "react-router-dom";
 import NewsFeed from "./components/Main/NewsFeed/NewsFeed";
@@ -21,9 +20,6 @@ const App: React.FC = () => {
                 </Routes>
 
             </main>
-            <footer>
-                <Footer/>
-            </footer>
         </div>
     );
 };

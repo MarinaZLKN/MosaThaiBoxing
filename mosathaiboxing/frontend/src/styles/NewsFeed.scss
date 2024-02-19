@@ -49,73 +49,67 @@
   }
 }
 
-.newsfeed-container{
+.newsfeed-container {
   width: 100%;
   height: auto;
-  position: relative;
-  .train-pic{
-      padding-top: 200px;
-      padding-left: 24%;
-    .train_reg-img{
-      width: 70%;
-    }
-  }
-  .newsfeed-list{
-    position: absolute;
-    top: 5%;
+  .newsfeed-list {
     width: 100%;
-    height: auto;
+    //height: auto;
     padding-left: 7%;
     padding-right: 7%;
     display: flex;
-
     flex-direction: column;
-  }
-  .news-container{
-      width: 100%;
-      height: auto;
-      margin-top: 40px;
-      display: flex;
-      border: 1px solid gray;
+    padding-bottom: 80px;
 
-      .news-image1{
-        width: 40%;
-        height: auto;
+  }
+
+  .news-container {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    display: flex;
+    border: 1px solid gray;
+
+    .news-image1 {
+      width: 40%;
+      height: auto;
+    }
+
+    .news-wrapper1 {
+      padding: 4% 4%;
+      display: flex;
+      flex-direction: column;
+      gap: 12%;
+
+      .news-date1 {
+        color: var(--White);
+        font-size: 20px;
       }
 
-      .news-wrapper1{
-        padding: 4% 4%;
-        display: flex;
-        flex-direction: column;
-        gap: 12%;
-
-        .news-date1{
-          color: var(--White);
-          font-size: 20px;
-        }
-        .news-title1{
-          color: var(--White);
-          font-size: 50px;
-        }
+      .news-title1 {
+        color: var(--White);
+        font-size: 50px;
+      }
 
 
-        .news-text{
-          font-family: var(--font-text);
-          color: var(--White);
-          line-height: 20px;
-        }
+      .news-text {
+        font-family: var(--font-text);
+        color: var(--White);
+        line-height: 20px;
+      }
 
-        .news-button{
-          width: 23%;
-          height: 12%;
-          font-size: 24px;
-        }
-        @media screen and (max-width: 1440px) {
-            .news-text{
-              font-size: 0.9vw;
-            }
+      .news-button {
+        width: 23%;
+        height: 12%;
+        font-size: 24px;
+      }
+
+      @media screen and (max-width: 1440px) {
+        .news-text {
+          font-size: 0.9vw;
         }
       }
     }
-
+  }
 }
+

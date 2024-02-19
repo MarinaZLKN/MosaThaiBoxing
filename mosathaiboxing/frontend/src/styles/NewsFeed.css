@@ -45,24 +45,14 @@
 .newsfeed-container {
   width: 100%;
   height: auto;
-  position: relative;
-}
-.newsfeed-container .train-pic {
-  padding-top: 200px;
-  padding-left: 24%;
-}
-.newsfeed-container .train-pic .train_reg-img {
-  width: 70%;
 }
 .newsfeed-container .newsfeed-list {
-  position: absolute;
-  top: 5%;
   width: 100%;
-  height: auto;
   padding-left: 7%;
   padding-right: 7%;
   display: flex;
   flex-direction: column;
+  padding-bottom: 80px;
 }
 .newsfeed-container .news-container {
   width: 100%;

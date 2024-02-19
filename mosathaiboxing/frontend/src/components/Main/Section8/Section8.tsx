@@ -2,6 +2,7 @@ import React from 'react';
 import '../../../styles/NewsFeed.scss';
 import News from "./News";
 import Title from "../../Title";
+import Footer from "../../Footer";
 
 const Section8: React.FC = () => {
 

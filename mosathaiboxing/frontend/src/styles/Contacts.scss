@@ -2,6 +2,7 @@
   width: 100%;
   height: auto;
   position: relative;
+  padding-bottom:20px;
   .contacts-row{
     position: absolute;
     top: 1%;
@@ -78,10 +79,15 @@
       display: flex;
       flex-direction: row;
       gap: 60px;
-      height: auto;
+      height: 700px;
+      overflow: hidden;
 
       .contacts-map{
         flex: 2;
+        .contacts-map-pic{
+          width: 700px;
+          height: 500px;
+        }
       }
       .contacts-data{
         flex: 1;
@@ -100,6 +106,9 @@
       }
 
     }
+  }
+  @media screen and (max-width: 1440px) {
+
   }
 
 }
