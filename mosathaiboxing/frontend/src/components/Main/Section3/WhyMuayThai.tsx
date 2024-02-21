@@ -49,9 +49,6 @@ const WhyMuayThai: React.FC = () => {
         setShowFirstText(true);
     };
 
-    // const toggleText = () => {
-    //   setShowFirstText(!showFirstText);
-    // };
 
     return (
         <div className="container wmt-container">

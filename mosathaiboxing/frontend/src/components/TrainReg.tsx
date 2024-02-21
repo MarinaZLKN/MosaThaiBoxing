@@ -65,9 +65,13 @@ const TrainReg: React.FC = () => {
                        required/>
               </div>
               <div>
-                <label className="train-reg-lab">Age</label>
-                <input className="input-train-reg" type="number" name="age" value={formData.age} onChange={handleChange}
-                       required/>
+                <label className="train-reg-lab">Level</label>
+                <select className="input-train-reg" name="level" value={formData.level} onChange={handleChange}>
+                  <option value="advanced">Advanced</option>
+                  <option value="beginner">Beginner</option>
+                  <option value="child">Child</option>
+                  <option value="basic-course">Basic Course</option>
+                </select>
               </div>
               <div>
                 <label className="train-reg-lab">Phone Number</label>
@@ -79,20 +83,21 @@ const TrainReg: React.FC = () => {
                 <input className="input-train-reg" type="email" name="email" value={formData.email}
                        onChange={handleChange} required/>
               </div>
+              <div className="train-reg-lab" id="lab">
+                <label>If you want to bring a child to training:</label>
+              </div>
+              <div>
+                <label className="train-reg-lab">Age</label>
+                <input className="input-train-reg" type="number" name="age" value={formData.age} onChange={handleChange}
+                       required/>
+              </div>
+
               <div>
                 <label className="train-reg-lab">Parent Name</label>
                 <input className="input-train-reg" type="text" name="parent_name" value={formData.parent_name}
                        onChange={handleChange} required/>
               </div>
-              <div>
-                <label className="train-reg-lab">Level</label>
-                <select className="input-train-reg" name="level" value={formData.level} onChange={handleChange}>
-                  <option value="advanced">Advanced</option>
-                  <option value="beginner">Beginner</option>
-                  <option value="child">Child</option>
-                  <option value="basic-course">Basic Course</option>
-                </select>
-              </div>
+
               <button id="train-reg_btn" type="submit">Join us</button>
             </form>
           </div>

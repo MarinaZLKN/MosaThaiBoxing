@@ -1,14 +1,15 @@
 @charset "UTF-8";
 .wmt-container {
   width: 100%;
-  height: auto;
+  height: 800px;
   display: flex;
   align-items: flex-start;
   margin-bottom: 30px;
 }
-@media screen and (max-width: 1640px) {
+@media screen and (max-width: 1440px) {
   .wmt-container {
-    margin-bottom: 0.1vh;
+    height: 650px;
+    margin-bottom: 5px;
   }
 }
 .wmt-container .wmt-picture-block {
@@ -25,19 +26,21 @@
     height: 40vw; /* Примерно 1002px на экране 1920px */
   }
 }
-@media screen and (max-width: 1330px) {
+@media screen and (max-width: 1440px) {
   .wmt-container .wmt-picture-block .wmt-picture {
     /* Дополнительное уменьшение размеров */
-    width: 27vw; /* Примерно 768px на экране 1330px */
-    height: 35vw; /* Примерно 1002px на экране 1330px */
+    width: 29vw; /* Примерно 768px на экране 1330px */
+    height: 40vw; /* Примерно 1002px на экране 1330px */
   }
 }
 .wmt-container .wmt-info-block {
+  height: 730px;
   display: flex;
   padding: 10px 96px 80px 100px;
   flex-direction: column;
   align-items: flex-start;
   gap: 58px;
+  position: relative;
 }
 .wmt-container .wmt-info-block .wmy-title {
   color: var(--White, #E5E5D6);
@@ -55,7 +58,7 @@
   font-weight: 300;
   line-height: 36px;
 }
-@media screen and (max-width: 1640px) {
+@media screen and (max-width: 1440px) {
   .wmt-container .wmt-info-block {
     padding: 1vw 6vw 5vw 6vw; /* Уменьшение отступов */
     gap: 3.5vw; /* Уменьшение расстояния между элементами */
@@ -70,8 +73,15 @@
   }
 }
 .wmt-container .arrow-container {
+  position: absolute;
+  bottom: -25px;
   display: flex;
   gap: 15px;
+}
+@media screen and (max-width: 1440px) {
+  .wmt-container .arrow-container {
+    bottom: 23%;
+  }
 }
 
 #next-btn {
