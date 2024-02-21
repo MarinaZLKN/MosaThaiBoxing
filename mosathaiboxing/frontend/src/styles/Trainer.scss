@@ -63,4 +63,12 @@
       line-height: 36px;
     }
   }
+  @media screen and (max-width: 1440px) {
+    .trainers{
+      gap: 100px;
+      .trainer_img{
+        width: 350px;
+      }
+    }
+  }
 }

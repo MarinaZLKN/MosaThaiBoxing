@@ -59,6 +59,11 @@
   color: var(--White);
   font-size: 14px;
 }
+.train_reg-container .train-reg-wrapper .train-reg-form #train-reg_btn {
+  position: absolute;
+  left: 30%;
+  cursor: pointer;
+}
 .train_reg-container .train-reg-wrapper .train-reg-form input,
 .train_reg-container .train-reg-wrapper .train-reg-form select {
   display: block;
@@ -77,6 +82,28 @@
   .train_reg-container .train-reg-title {
     font-size: 80px;
   }
+}
+.train_reg-container .train-reg-wrapper_sent {
+  position: absolute;
+  top: 1%;
+  left: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  height: 100vh;
+}
+.train_reg-container .train-reg-wrapper_sent .train-reg-wrapper_sent-container {
+  display: block;
+  text-align: center;
+}
+.train_reg-container .train-reg-wrapper_sent .train-reg-wrapper_sent-container .train-reg-wrapper_sent-text {
+  color: var(--White);
+  font-family: var(--font-text);
+  font-size: 20px;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
 /*# sourceMappingURL=TrainReg.css.map */

@@ -103,6 +103,11 @@
           color: var(--White);
           font-family: var(--font-text);
         }
+        .contacts-p a{
+          color: inherit;
+          text-decoration: none;
+        }
+
       }
 
     }

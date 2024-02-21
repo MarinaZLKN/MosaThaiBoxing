@@ -17,7 +17,9 @@ const Footer: React.FC = () => {
         <Logo alt="footer logo" className="footer-logo"/>
         <div className="footer-social">
             <img className="footer-social_logo" src={fb}/>
-            <img className="footer-social_logo" src={ig}/>
+            <a href="https://www.instagram.com/mosathaiboxing">
+              <img className="footer-social_logo" src={ig} alt="Instagram"/>
+            </a>
         </div>
         </div>
 

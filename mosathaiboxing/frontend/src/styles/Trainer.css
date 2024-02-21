@@ -59,5 +59,13 @@
   font-weight: 400;
   line-height: 36px;
 }
+@media screen and (max-width: 1440px) {
+  .trainer-list_container .trainers {
+    gap: 100px;
+  }
+  .trainer-list_container .trainers .trainer_img {
+    width: 350px;
+  }
+}
 
 /*# sourceMappingURL=Trainer.css.map */

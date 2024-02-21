@@ -100,5 +100,9 @@
   color: var(--White);
   font-family: var(--font-text);
 }
+.contacts-container .contacts-wrapper .contacts-data-container .contacts-data .contacts-p a {
+  color: inherit;
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=Contacts.css.map */
