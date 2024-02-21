@@ -121,9 +121,9 @@ const Contacts: React.FC = () => {
                             <p className="contacts-p">{contact.company_name}</p>
                             <p className="contacts-p">{contact.account_number}</p>
                             <p className="contacts-p">{contact.address}</p>
-                            <p className="contacts-p">{contact.phone_number1}</p>
-                            <p className="contacts-p">{contact.phone_number2}</p>
-                            <p className="contacts-p">{contact.email}</p>
+                            <p className="contacts-p" id="phone_number"><a href={`tel:${contact.phone_number1}`}>{contact.phone_number1}</a></p>
+                            <p className="contacts-p" id="phone_number"><a href={`tel:${contact.phone_number2}`}>{contact.phone_number2}</a></p>
+                            <p className="contacts-p"><a href={`mailto:${contact.email}`}>{contact.email}</a></p>
                             <p className="contacts-p">{contact.registration_number}</p>
                         </div>
 
